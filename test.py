@@ -12,10 +12,10 @@ if not TOKEN:
     raise RuntimeError("CLOUDFLARE_EMAIL_TOKEN missing from .env")
  
 SENDER    = "demo.test@csulbai.com"                     # your verified domain
-RECIPIENT = "achal.mohandas01@student.csulb.edu"      # <-- your OWN inbox, or the MXToolbox address
+RECIPIENT = "Samuel.lee08@student.csulb.edu"      # <-- your OWN inbox, or the MXToolbox address
  
 msg = MIMEMultipart()
-msg["From"] = f"Pseudo Demo <{SENDER}>"   # display name deceptive, domain authenticated
+msg["From"] = f"{SENDER}"   # display name deceptive, domain authenticated
 msg["To"] = RECIPIENT
 msg["Subject"] = "Test mail one"
 msg.attach(MIMEText("Test site : www.csulbai.com", "plain"))
